@@ -8,3 +8,8 @@ DATA_DIR = BASE_DIR / 'data'
 data = 'ncr_ride_bookings.csv'
 
 df = pd.read_csv(DATA_DIR / data)
+
+# Quick overview
+print(df.shape)
+print(df.info())
+print(df.describe(include='all').T)
