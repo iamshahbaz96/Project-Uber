@@ -49,15 +49,20 @@ Payment Trends: UPI has overtaken Cash as the preferred payment method, accounti
 📂 Repository Structure
 Plaintext
 
-├── Data/
-│   ├── ncr_ride_bookings.csv      # Raw Data
-│   └── uber_ncr_cleaned.csv       # Cleaned Data (Python Output)
-├── Python/
-│   └── data_cleaning.py           # Cleaning script
+├── data/
+│   └── ncr_ride_bookings.csv      # Raw Data
+├── codes/
+│   ├── data_cleaning.py           # Cleaning script
+│   ├── ImportFromSQL.py           # Import from SQL script
+│   └── ImportToSQL.py             # Import to SQL script
+├── output
+│   └── cleaned_data.csv           # Clean Data 
 ├── SQL/
-│   └── analysis_queries.sql       # Business logic queries
-├── Dashboard/
-│   └── Uber_NCR_Dashboard.pbix    # Power BI File
+│   └── Cancellation Rate by Vehicle Type.sql       # Cancellation Rate queries
+│   ├── Peak Hour Revenue Analysis.sql              # Peak Hour Analysis queries
+│   └── Top 5 High-Demand Pickup Locations.sql      # High Demand queries 
+├── powerbi/
+│   └── Dashboard.pbix    # Power BI File
 └── README.md
 👤 Author
 [Shahbaz Ahmed](https://www.linkedin.com/in/shahbaz-ahmed-9a239b131/)
