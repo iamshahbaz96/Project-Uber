@@ -15,14 +15,14 @@ engine = create_engine(f"mysql+pymysql://{username}:{password}@{host}:{port}/{da
 # ─── Paths ────────────────────────────────────────────────
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / 'data'
-OUTPUT_DIR = BASE_DIR / 'outputs'
+OUTPUT_DIR = BASE_DIR / 'output'
 
 # Example CSV file path (you can loop if multiple files)
-data = "ncr_ride_bookings.csv"   # change to your filename
-table_data = "data" # change to your table name
+df = "cleaned_data.csv"   # change to your filename
+table_data = "cleaned_data" # change to your table name
 
 # Read CSV file
-df_data = pd.read_csv(DATA_DIR / data)
+df_data = pd.read_csv(OUTPUT_DIR / df)
 
 # Write DataFrame to MySQL (creates a new table if not exists)
 df_data.to_sql(table_data, con=engine, if_exists="replace", index=False)
